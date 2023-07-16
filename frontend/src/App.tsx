@@ -12,7 +12,7 @@ const App = () => {
   const [messages, setMessages] = useState<Message[]>([])
 
   useEffect(() => {
-    const client = io("http://localhost:5001")
+    const client = io("https://live-chat-rkoi.onrender.com")
 
     setSocket(client)
 

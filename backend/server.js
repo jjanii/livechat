@@ -1,14 +1,12 @@
 const express = require('express');
 const http = require('http');
-const { Server } = require('socket.io');
-
 const app = express();
 const server = http.createServer(app);
-const io = new Server(server, {
+
+const io = require('socket.io')(server, {
   cors: {
-    origin: 'http://localhost:3000', // Replace with your frontend URL
-    allowedHeaders: ['Content-Type'], // Specify the allowed headers
-  },
+    origin: '*',
+  }
 });
 
 const PORT = 5001;
