@@ -10,6 +10,10 @@ const Container = styled.div`
   height: 100vh;
   padding: 20px;
   box-sizing: border-box;
+
+  @media (max-width: 768px) {
+    height: calc(100vh - 40px);
+  }
 `
 
 const Chat = ({
