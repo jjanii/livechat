@@ -13,7 +13,7 @@ const App = () => {
 
   useEffect(() => {
     const client = io("http://localhost:5001")
-    
+
     setSocket(client)
 
     client.on("connect", () => {

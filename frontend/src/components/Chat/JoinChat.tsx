@@ -46,7 +46,7 @@ const JoinChat = (props: Props) => {
     socket?.on("usernameTaken", () =>
       setError("Username already in use in the chat.")
     )
-  }, [socket, username])
+  }, [socket, username, onLogin])
 
   return (
     <Container>
