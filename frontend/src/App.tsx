@@ -14,7 +14,6 @@ const App = () => {
 
   useEffect(() => {
     if (!SERVER_PATH) return console.error("Server path not defined")
-    // todo: use env variables
     const client = io(SERVER_PATH)
 
     setSocket(client)
