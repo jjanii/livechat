@@ -4,6 +4,7 @@ import Chat from "./components/Chat/Chat"
 import JoinChat from "./components/Chat/JoinChat"
 import { Message } from "./types/chat"
 
+const SERVER_PATH = process.env.REACT_APP_SERVER_ROUTE
 const App = () => {
   const [socket, setSocket] = useState<Socket | null>(null)
   const [username, setUsername] = useState<string>("")
@@ -12,8 +13,9 @@ const App = () => {
   const [messages, setMessages] = useState<Message[]>([])
 
   useEffect(() => {
+    if (!SERVER_PATH) return console.error("Server path not defined")
     // todo: use env variables
-    const client = io("https://live-chat-rkoi.onrender.com")
+    const client = io(SERVER_PATH)
 
     setSocket(client)
 
