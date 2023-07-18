@@ -12,6 +12,7 @@ const App = () => {
   const [messages, setMessages] = useState<Message[]>([])
 
   useEffect(() => {
+    // todo: use env variables
     const client = io("https://live-chat-rkoi.onrender.com")
 
     setSocket(client)

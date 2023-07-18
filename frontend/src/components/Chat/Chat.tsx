@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import { Socket } from "socket.io-client"
 import ChatInput from "./ChatInput"
-import ChatList from "./ChatList"
+import ChatMessages from "./ChatMessages"
 import { Message } from "../../types/chat"
 
 const Container = styled.div`
@@ -27,7 +27,7 @@ const Chat = ({
 }) => {
   return (
     <Container>
-      <ChatList messages={messages} username={username} />
+      <ChatMessages messages={messages} username={username} />
       <ChatInput username={username} socket={socket} />
     </Container>
   )

@@ -38,7 +38,7 @@ type Props = {
   username: string
 }
 
-const ChatList = ({ messages, username }: Props) => {
+const ChatMessages = ({ messages, username }: Props) => {
   return (
     <Messages>
       {messages.map((message, index) => {
@@ -56,4 +56,4 @@ const ChatList = ({ messages, username }: Props) => {
   )
 }
 
-export default ChatList
+export default ChatMessages
