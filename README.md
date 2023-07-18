@@ -4,7 +4,7 @@
 ##### Frontend: React
 ##### Backend: Node.js
 ### How to run
-The app uses on local dev mode `localhost:3000` for frontend, and `localhost:5001` for the server. Feel free to change the server port in the `server.js` file and also in the `env.development` file
+The app uses on local dev mode `localhost:3000` for frontend, and `localhost:5001` for the server. Feel free to change the server port in the `server.js` file and also in the `.env.development` file
 #### Frontend
 ```bash
 foo@bar:~$ cd frontend && npm install
